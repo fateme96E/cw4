@@ -27,12 +27,21 @@
 
 
 
-function printArr(arr){
-    for (let i = 0; i < arr.length; i++){
-        console.log(`"row ${i}" \n`);
-        for (let j = 0; j < arr[i].length; j++){
-            console.log(`" ${arr[i][j]} " \n`);
-        }
-    }
+// function printArr(arr){
+//     for (let i = 0; i < arr.length; i++){
+//         console.log(`"row ${i}" \n`);fit
+//         for (let j = 0; j < arr[i].length; j++){
+//             console.log(`" ${arr[i][j]} " \n`);
+//         }
+//     }
+// }
+// printArr([[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]]);
+
+//2nd solution:
+function printArrWithMap(arr){
+    arr.map(function(item, index ) {
+        console.log(`"row ${index}" \n`)
+        console.log(`"${item}" \n`)});
+
 }
-printArr([[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]]);
+printArrWithMap([[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]]);
