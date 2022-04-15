@@ -16,11 +16,23 @@
 // lastElement([2, 6, 0, -2, 4],6);
 
 
-function joinElements(arr){
-    let res = arr.join(',');
-    console.log(`" ${res} "`);
+// function joinElements(arr){
+//     let res = arr.join(',');
+//     console.log(`" ${res} "`);
 
-    let res2 = arr.join('+');
-    console.log(`" ${res2} "`);
+//     let res2 = arr.join('+');
+//     console.log(`" ${res2} "`);
+// }
+// joinElements(["Red", "Green", "White", "Black"]);
+
+
+
+function printArr(arr){
+    for (let i = 0; i < arr.length; i++){
+        console.log(`"row ${i}" \n`);
+        for (let j = 0; j < arr[i].length; j++){
+            console.log(`" ${arr[i][j]} " \n`);
+        }
+    }
 }
-joinElements(["Red", "Green", "White", "Black"]);
+printArr([[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]]);
