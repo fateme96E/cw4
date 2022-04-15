@@ -38,10 +38,47 @@
 // printArr([[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]]);
 
 //2nd solution:
-function printArrWithMap(arr){
-    arr.map(function(item, index ) {
-        console.log(`"row ${index}" \n`)
-        console.log(`"${item}" \n`)});
+// function printArrWithMap(arr){
+//     arr.map(function(item, index ) {
+//         console.log(`"row ${index}" \n`)
+//         console.log(`"${item}" \n`)});
 
+// }
+// printArrWithMap([[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]]);
+
+//with arrow function:
+function concatArrs(arr){
+    let concatedArr = arr.map(function(item, index){
+        let res = item.reduce((acc, i) => 
+            acc = acc+' ' +i
+        )
+        console.log(res);
+    })
+    
 }
-printArrWithMap([[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]]);
+concatArrs([
+    ["The","red", "horse"],
+    ["Plane","over","the","ocean"],
+    ["Chocolate","ice","cream","is","awesome"],
+    ["this","is","a","long","sentence"]
+    ])
+
+
+//without arrow function:
+function concatArrs1(arr){
+    let concatedArr = arr.map(function(item, index){
+
+        let res = item.reduce((acc, i) => {
+            acc = acc+' ' +i;
+            return acc;
+        },'')
+        console.log(res);
+    })
+    
+}
+concatArrs1([
+    ["The","red", "horse"],
+    ["Plane","over","the","ocean"],
+    ["Chocolate","ice","cream","is","awesome"],
+    ["this","is","a","long","sentence"]
+    ])
